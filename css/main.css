@@ -56,7 +56,7 @@
     }
 
 	#first-slider .carousel .item {
-		min-height: 500px;
+		min-height: 580px;
 		height: 100%;
 		width: 100%;
 	}
@@ -92,23 +92,23 @@
 /* iPad Pro Styles */
 @media (min-width:901px) and (max-width: 1024px) {
     #first-slider .slide1 {
-        background-image: url('../images/slides/ip_slider_1.jpg'); /* iPad-specific image */
+        background-image: url('../images/slides/ip_slider_1.jpg'); 
 		background-size: cover;
 		background-repeat: no-repeat;
     }
     
     #first-slider .slide2 {
-        background-image: url('../images/slides/ip_slider_2.jpg'); /* iPad-specific image */
+        background-image: url('../images/slides/ip_slider_2.jpg'); 
 		background-size: cover;
 		background-repeat: no-repeat;
     }
     
     #first-slider .slide3 {
-        background-image: url('../images/slides/ip_slider_3.jpg'); /* iPad-specific image */
+        background-image: url('../images/slides/ip_slider_3.jpg'); 
 		background-size: cover;
 		background-repeat: no-repeat;
     }
-}
+} 
 
 /* ------------------------------------------------------------------------------
 	Typography
