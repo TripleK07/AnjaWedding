@@ -12,9 +12,9 @@
             box-sizing: border-box;
         }
 
-        html, body {
-            height: 100%;
-            overflow: hidden;
+        body {
+            height: auto; /* Allow body to adjust height */
+            overflow-y: auto; /* Allow vertical scrolling */
             background-color: #000; /* Black background for contrast */
             font-family: 'Roboto', sans-serif; /* Google Font */
         }
@@ -23,10 +23,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            
             position: relative;
             color: white;
             text-align: center;
+            overflow: hidden; /* Hide any overflow */
         }
 
         .overlay {
@@ -81,11 +82,9 @@
 
         .landscape-image {
             display: none; /* Initially hidden */
-            width: 100%;
-            height: auto;
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: cover;
+            width: 100%; /* Full width */
+            height: auto; /* Full height */
+            object-fit: cover; /* Cover the container while maintaining aspect ratio */
         }
     </style>
 </head>
@@ -97,13 +96,8 @@
             <img src="./images/rotate.gif" alt="Rotate Device" class="rotate-gif"> <!-- Add your GIF here -->
         </div>
         <img src="./images/zoom-only.gif" alt="Landscape SVG" class="landscape-image" id="landscapeImage">
-        <audio id="backgroundMusic" loop>
-            <source src="bg-music.mp3" type="audio/mpeg"> <!-- Add your music file here -->
-            Your browser does not support the audio element.
-        </audio>
     </div>
     <script>
-	
         const backgroundMusic = document.getElementById('backgroundMusic');
 
         function checkOrientation() {
@@ -117,7 +111,7 @@
             } else {
                 overlay.style.display = 'none'; // Hide overlay
                 image.style.display = 'block'; // Show image
-				backgroundMusic.muted = false;
+                backgroundMusic.muted = false;
                 backgroundMusic.play(); // Play music
             }
         }
